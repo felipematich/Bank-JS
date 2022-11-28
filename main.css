@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #393E46; }
+
+.logo {
+  margin: 0px 70px 0px 0px;
+  padding: 20px; }
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  font-family: sans-serif;
+  font-size: 24px; }
+
+.nav-item {
+  margin: 20px; }
+
+.nav-link {
+  color: #F2E7D5; }
+
+#login {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #6D9886; }
+
+.carousel-item {
+  max-height: 700px;
+  width: 100%; }
+
+#img {
+  max-height: 700px; }
+
+.carousel-caption {
+  margin: 0 auto;
+  width: 30%;
+  opacity: 90%;
+  font-size: 24px;
+  background-color: #393E46; }
+
+/* Depositos */
+.dep {
+  background-color: #6D9886;
+  padding: 10px 0px 20px 0px; }
+
+#depositosH1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0px 10px 10px;
+  padding: 10px;
+  font-size: 40px;
+  font-family: 'Secular One', sans-serif; }
+
+.depositosH3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  color: #F2E7D5; }
+
+.depDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.depositos {
+  width: 20%;
+  margin: 0 auto;
+  background-color: #393E46;
+  padding: 16px;
+  border: 3px solid #F2E7D5;
+  border-radius: 6%;
+  box-shadow: 0 25px 50px -12px #393E46; }
+
+.depositosDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 10px; }
+
+.depositosBot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+#depositoBoton {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #6D9886;
+  border: 2px solid #F2E7D5;
+  border-radius: 5px; }
+
+#contenedorDep {
+  color: #F2E7D5;
+  font-size: 20px;
+  padding: 10px; }
+
+/* Extracciones */
+.ext {
+  background-color: #F2E7D5;
+  padding: 10px 0px 20px 0px; }
+
+.extracciones {
+  width: 20%;
+  margin: 0 auto;
+  background-color: #393E46;
+  padding: 10px;
+  border: 3px solid #6D9886;
+  border-radius: 6%;
+  box-shadow: 0 25px 50px -12px #6D9886; }
+
+.extDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+#extraccionesH1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0px 10px 10px;
+  padding: 10px;
+  font-size: 40px;
+  font-family: 'Secular One', sans-serif; }
+
+.recoExt {
+  font-size: 18px;
+  color: #F2E7D5;
+  margin: 10px;
+  width: fit-content; }
+
+.extraccionesBot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+#extraccionesBoton {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #6D9886;
+  border: 2px solid #F2E7D5;
+  border-radius: 5px; }
+
+.extraccionesH3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  color: #F2E7D5; }
+
+#contenedorExt {
+  color: #F2E7D5;
+  font-size: 20px;
+  padding: 10px; }
+
+/* Usuarios */
+.registro {
+  background-color: #393E46;
+  padding: 10px 0px 20px 0px; }
+
+#registroH1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0px 10px 10px;
+  padding: 10px;
+  font-size: 40px;
+  font-family: 'Secular One', sans-serif;
+  color: #F2E7D5; }
+
+.cuentas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.crearUsuario {
+  width: 20%;
+  background-color: #393E46;
+  padding: 16px;
+  border: 3px solid #F2E7D5;
+  border-radius: 6%;
+  box-shadow: 0 25px 50px -12px #F2E7D5; }
+
+.crearUsuarioSub {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24px;
+  color: #F2E7D5; }
+
+.crearUsuariopar {
+  font-size: 18px;
+  color: #F2E7D5;
+  margin: 10px;
+  border-bottom: 2px solid #F2E7D5;
+  width: fit-content; }
+
+.label {
+  color: #F2E7D5; }
+
+.botonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.boton {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #6D9886;
+  border: 2px solid #F2E7D5;
+  border-radius: 5px; }

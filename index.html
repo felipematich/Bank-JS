@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="shortcut icon" href="./imagenes/icono.png">
+	<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="./main.css">
+    <title>Banco Austral</title>
+</head>
+<body>
+    <header>
+		<a href="#navbar"><img class="logo" src="./imagenes/logo.png" alt="imagen banco"></a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#depositosH1">Depositos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#extraccionesH1">Extracciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Plazos fijos</a>
+                  </li>
+				  <li class="nav-item">
+                    <a id="login" class="nav-link" aria-current="page" href="#registroH1">Ingresar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+	<main>
+		<div class="carrousel">
+			<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active" data-bs-interval="5000">
+					<img id="img" src="./imagenes/deposito.png" class="d-block w-100" alt="img deposito">
+					<div class="carousel-caption d-none d-md-block">
+					  <h5>Depositos 100% seguros</h5>
+					  <p>Depositos resguardados bajo seguros</p>
+					</div>
+				  </div>
+				  <div class="carousel-item" data-bs-interval="5000">
+					<img id="img" src="./imagenes/ahorros.png" class="d-block w-100" alt="img ahorros">
+					<div class="carousel-caption d-none d-md-block">
+					  <h5>Caja de ahorros gratis</h5>
+					  <p>Abrite una caja de ahorros sin letra chica</p>
+					</div>
+				  </div>
+				  <div class="carousel-item" data-bs-interval="5000">
+					<img id="img" src="./imagenes/plazo.png" class="d-block w-100" alt="img plazofijo">
+					<div class="carousel-caption d-none d-md-block">
+					  <h5>Plazos fijos rentables</h5>
+					  <p>Ajustados para que no te gane la inflacion</p>
+					</div>
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		</div>
+
+		<div class="dep">
+			<h1 id="depositosH1">Depositos</h1>
+			<div class="depDiv">
+				<div class="depositos">
+					<div class="depositosDiv">
+						<div class="inputs">
+							<label class="label" for="usuarioDep">Ingrese el usuario al cual depositar</label>
+							<input type="text" id="usuarioDep" placeholder="Ingrese usuario">
+						</div>
+						<div class="inputs">
+							<label class="label" for="montoDep">Ingrese el monto a depositar</label>
+							<input type="text" id="montoDep" placeholder="Ingrese el monto">
+						</div>
+					</div>
+					<div class="depositosBot">
+						<button id="depositoBoton" type="submit">Depositar</button>
+					</div>
+				</div>
+				<div  id="ultimosMov" class="depositos">
+					<h3 class="depositosH3">Ultimo deposito</h3>
+					<div id="contenedorDep"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ext">
+			<h1 id="extraccionesH1">Extracciones</h1>
+			<div class="extDiv">
+				<div class="extracciones">
+					<div class="extraccionesDiv">
+						<div class="inputs">
+							<label class="label" for="usuarioExt">Ingrese el usuario al cual extraer</label>
+							<input type="text" id="usuarioExt" placeholder="Ingrese usuario">
+						</div class="inputs">
+						<div class="inputs">
+							<label class="label" for="montoExt">Ingrese el monto a extraer</label>
+							<input type="text" id="montoExt" placeholder="Ingrese el monto">
+						</div>
+						<p class="recoExt">*Recuerde que ls extracciones tienen un impuesto del 10%</p>
+						<div class="extraccionesBot">
+							<button id="extraccionesBoton" type="submit">Extraer</button>
+						</div>
+					</div>
+				</div>	
+				<div  id="ultimasExt" class="extracciones">
+					<h3 class="extraccionesH3">Ultima extraccion</h3>
+					<div id="contenedorExt"></div>
+				</div>	
+			</div>
+		</div>
+
+		<div class="registro">
+			<h1 id="registroH1">Usuarios</h1>
+			<div class="cuentas">
+				<div class="crearUsuario">
+					<h3 class="crearUsuarioSub">Crear un usuario</h3>
+					<p class="crearUsuariopar">Complete sus datos:</p>
+					<div class="inputs">
+						<label class="label" for="usuario">Nombre de usuario</label>
+						<input type="text" id="usuario" placeholder="Usuario">
+					</div>
+					<div class="inputs">
+						<label class="label" for="email">Correo electronico</label>
+						<input type="email" id="email" placeholder="Correo">
+					</div>
+					<div class="inputs">
+						<label class="label" for="contraseña">Contraseña</label>
+						<input type="password" id="contraseña" placeholder="Contraseña">
+					</div>
+					<div class="inputs">
+						<label class="label" for="limite">Limite de extraccion</label>
+						<input type="text" id="limite" placeholder="Limite en ARS">
+					</div>
+					<div class="botonDiv">
+						<button id="bot1" class="boton" type="submit">Registrarme</button>
+					</div>
+					
+				</div>
+
+				<div class="crearUsuario">
+					<h3 class="crearUsuarioSub">Ingresar</h3>
+					<p class="crearUsuariopar">Complete sus datos:</p>
+					<div class="inputs">
+						<label class="label" for="usuario1">Nombre de usuario</label>
+						<input type="text" id="usuario1" placeholder="Usuario">
+					</div>
+					<div class="inputs">
+						<label class="label" for="email1">Correo electronico</label>
+						<input type="email" id="email1" placeholder="Correo">
+					</div>
+					<div class="inputs">
+						<label class="label" for="contraseña1">Contraseña</label>
+						<input type="password" id="contraseña1" placeholder="Contraseña">
+					</div>
+					<div class="inputs">
+						<label class="label" for="contraseña2">Repetir contraseña</label>
+						<input type="password" id="contraseña2" placeholder="Repetir contraseña">
+					</div>
+					<div class="botonDiv">
+						<button id="bot2" class="boton" type="submit">Ingresar</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<script src="./JS/CuentaBancariaClass.js"></script>
+	<script src="./JS/funcionesArray.js"></script>
+	<script src="./JS/usuarios.js"></script>
+	<script src="./JS/depositos.js"></script>	
+	<script src="./JS/extracciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
