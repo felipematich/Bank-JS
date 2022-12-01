@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="shortcut icon" href="./imagenes/icono.png">
 	<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">	
+	<script src="https://kit.fontawesome.com/9b51235d81.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link rel="stylesheet" href="./main.css">
     <title>Banco Austral</title>
@@ -27,7 +28,7 @@
                     <a class="nav-link" aria-current="page" href="#extraccionesH1">Extracciones</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Plazos fijos</a>
+                    <a class="nav-link" aria-current="page" href="#dolarH1">Dolar HOY</a>
                   </li>
 				  <li class="nav-item">
                     <a id="login" class="nav-link" aria-current="page" href="#registroH1">Ingresar</a>
@@ -131,6 +132,74 @@
 			</div>
 		</div>
 
+		<div class="dolar">
+			<h1 id="dolarH1">Precios del Dolar</h1>
+			<div class="dolarBody">
+				<div class="dolarTipos">
+					<div class="dolarBox">
+						<div class="dolarHead">
+							<img src="./imagenes/dolar-oficial.png" alt="dolar">
+							<p>DOLAR OFICIAL</p>
+						</div>
+						<div class="dolarCYV">
+							<div class="dolarPrecios">
+								<p>Compra</p>
+								<div id="dolarOficialCompra"></div>
+							</div>
+							<div class="dolarPrecios">
+								<p>Venta</p>
+								<div id="dolarOficialVenta"></div>
+							</div>
+						</div>
+					</div>
+					<div class="dolarBox">
+						<div class="dolarHead">
+							<img src="./imagenes/dolar-blue.png" alt="dolar">
+							<p>DOLAR BLUE</p>
+						</div>
+						<div class="dolarCYV">
+							<div class="dolarPrecios">
+								<p>Compra</p>
+								<div id="dolarblueCompra"></div>
+							</div>
+							<div class="dolarPrecios">
+								<p>Venta</p>
+								<div id="dolarblueVenta"></div>
+							</div>
+						</div>
+					</div>
+					<div class="dolarBox">
+						<div class="dolarHead">
+							<img src="./imagenes/dolar-turista.png" alt="dolar">
+							<p>DOLAR TURISTA</p>
+						</div>
+						<div class="dolarCYV">
+							<div class="dolarPrecios">
+								<p>Venta</p>
+								<div id="dolarturistaVenta"></div>
+							</div>
+						</div>
+					</div>
+					<div class="dolarBox">
+						<div class="dolarHead">
+							<img src="./imagenes/dolar-bolsa.png" alt="dolar">
+							<p>DOLAR BOLSA</p>
+						</div>
+						<div class="dolarCYV">
+							<div class="dolarPrecios">
+								<p>Compra</p>
+								<div id="dolarbolsaCompra"></div>
+							</div>
+							<div class="dolarPrecios">
+								<p>Venta</p>
+								<div id="dolarbolsaVenta"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="registro">
 			<h1 id="registroH1">Usuarios</h1>
 			<div class="cuentas">
@@ -192,6 +261,7 @@
 	<script src="./JS/usuarios.js"></script>
 	<script src="./JS/depositos.js"></script>	
 	<script src="./JS/extracciones.js"></script>
+	<script src="./JS/dolar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

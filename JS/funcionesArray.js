@@ -1,6 +1,15 @@
-const cuentas = [];
+let cuentas = JSON.parse(sessionStorage.getItem("cuentas"))
 
-
+if(cuentas == undefined){
+    cuentas = []
+}
+else{
+    let aux = []
+    cuentas.forEach(element => {
+        aux.push(new cuentaBancaria(element.usuario, element.correo, element.contra, element.limite, element.saldo))
+    });
+    cuentas = aux;
+}
 
 function buscarCuenta (nombreCuenta){
     return cuentas.find((elemento) => { 

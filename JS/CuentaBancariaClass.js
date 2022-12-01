@@ -1,10 +1,10 @@
 class cuentaBancaria {
-    constructor(usuarioIngresado, correoIngresado, contraIngresado, limiteIngresado) {
+    constructor(usuarioIngresado, correoIngresado, contraIngresado, limiteIngresado, saldo) {
         this.usuario = usuarioIngresado;
         this.correo = correoIngresado;
         this.contra = contraIngresado;
         this.limite = limiteIngresado;
-        this.saldo = 0;
+        this.saldo = saldo;
     }
 
     deposito(monto) {

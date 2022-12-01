@@ -15,7 +15,7 @@ bot1.onclick = (e) => {
     let usuario = user.value;
     let correo = email.value;
     let contra = password.value;
-    let limite = limit.value;
+    let limite = parseInt(limit.value);
     if (usuario == "" || correo == "" || contra == "" || isNaN(limite)){
         Swal.fire({
             title: 'Registro fallido',
@@ -25,7 +25,7 @@ bot1.onclick = (e) => {
         });
     }
     else{
-        cuentas.push(new cuentaBancaria(usuario, correo, contra, limite));
+        cuentas.push(new cuentaBancaria(usuario, correo, contra, limite, 0));
         sessionStorage.setItem("cuentas", JSON.stringify(cuentas));
         Swal.fire({
             title: 'Usuario creado',

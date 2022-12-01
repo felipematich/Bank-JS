@@ -4,7 +4,7 @@ let botondep = document.getElementById("depositoBoton");
 let ultDep = document.getElementById("contenedorDep");
 
 botondep.onclick = (e) => {
-    let monto = parseInt(cantidad.value);
+    let monto = parseFloat(cantidad.value);
     let nombreCuenta = cuentaInput.value;
     let cuenta = buscarCuenta(nombreCuenta);
     if (nombreCuenta == "" || isNaN(monto) || cuenta == undefined || monto < 0) {
@@ -17,7 +17,7 @@ botondep.onclick = (e) => {
     } else {
         depositarEnCuenta(nombreCuenta, monto);
         sessionStorage.setItem("cuentas", JSON.stringify(cuentas));
-        ultDep.innerHTML = `<p>${cuenta.usuario.toUpperCase()}: $${monto}</p><p>Saldo en cuenta: $${cuenta.saldo}`;
+        ultDep.innerHTML = `<p>${cuenta.usuario.toUpperCase()}: $${monto.toFixed(2)}</p><p>Saldo en cuenta: $${cuenta.saldo.toFixed(2)}`;
         Swal.fire({
             title: 'Deposito exitoso',
             text: 'Deposito realizado exitosamente',
